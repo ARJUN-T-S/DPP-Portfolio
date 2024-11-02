@@ -1,0 +1,370 @@
+html {
+    margin: 0px 0px auto 0px; 
+}
+body{
+    background-color:#383961;
+    margin-right: 0;
+    margin-left: 0;
+}
+.header {
+    margin-top: 0%;
+    display: flex;
+    width: 100%;
+    height: 5.5vw;
+    background-color: #383961;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo_container {
+    display: flex;
+    width: 30%;
+    background-color: inherit;
+    float: left;
+}
+.logo_container img{
+    margin-top: 1vw;
+    margin-left: 3vw;
+    padding-top: 0.2vw;
+    width: 6vw;
+}
+.nav_container {
+    display: flex;
+    width: 70%;
+    background-color: inherit;
+    float: right;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.nav_bar {
+    list-style: none;
+    margin-right: 1.5vw;
+}
+
+.nav_bar li {
+    padding-top: 1vw;
+    display: inline-block;
+    margin-right: 2vw;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+}
+
+.nav_bar li:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3vw;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth text color transition */
+    font-family: "Playfair Display", serif;
+}
+
+/* Underline animation */
+.nav_bar a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:whitesmoke; /* Underline color */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_bar a:hover:before {
+    visibility: visible;
+    width: 100%; /* Expands underline */
+}
+
+
+/* Glow effect on hover (optional) */
+.nav_bar a:hover {
+    text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+}
+
+/* Add keyframes for a dynamic entrance animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav_bar li {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Background hover effect for the nav items */
+.nav_bar li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav_bar li:hover::before {
+    transform: scaleX(1); /* Expands background effect on hover */
+}
+@media (max-width: 768px){
+    .header {
+        height: auto; /* Allow header height to adjust as needed */
+        padding: 1vw 3vw; /* Add some padding */
+    }
+    
+    .logo_container {
+        display: flex;
+        width: 30%;
+        background-color: inherit;
+        float: left;
+    }
+    .logo_container img{
+        margin-top: 2.3vw;
+        margin-left: 3vw;
+        padding-top: 0.2vw;
+        width: 5.5vw;
+    }
+    .nav_container {
+        display: flex;
+        width: 70%;
+        background-color: inherit;
+        float: right;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    
+    .nav_bar {
+        list-style: none;
+        margin-right: 1.5vw;
+    }
+    
+    .nav_bar li {
+        padding-top: 0;
+        display: inline-block;
+        margin-right: 2vw;
+        position: relative;
+        transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+    }
+    
+    .nav_bar li:hover {
+        transform: scale(1.1); /* Zoom effect */
+    }
+    
+    .nav_bar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3vw;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease; /* Smooth text color transition */
+        font-family: "Playfair Display", serif;
+    }
+    
+    /* Underline animation */
+    .nav_bar a:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color:whitesmoke; /* Underline color */
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .nav_bar a:hover:before {
+        visibility: visible;
+        width: 100%; /* Expands underline */
+    }
+    
+    
+    /* Glow effect on hover (optional) */
+    .nav_bar a:hover {
+        text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+    }
+    
+    /* Add keyframes for a dynamic entrance animation */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .nav_bar li {
+        animation: slideIn 0.5s ease-in-out;
+    }
+    
+    /* Background hover effect for the nav items */
+    .nav_bar li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav_bar li:hover::before {
+        transform: scaleX(1); /* Expands background effect on hover */
+    }
+}
+/* Contact Section Styling */
+.contact {
+    margin-top: 7vw;
+    background-color: #383961;
+    color: #fff;
+    padding: 3vw;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.contact h2 {
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+    font-family: 'Abril Fatface', cursive;
+    color: #fff;
+}
+
+.contact-info p {
+    font-size: 1.2vw;
+    margin: 0.5vw 0;
+}
+
+.contact-info a {
+    color: #c0c7e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #e2e6f2;
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contact {
+        padding: 5vw 3vw;
+    }
+
+    .contact h2 {
+        font-size: 5vw;
+    }
+
+    .contact-info p {
+        font-size: 3.5vw;
+    }
+}
+/* Feedback Section Styling */
+.feedback {
+    background-color: #383961;
+    color: #fff;
+    padding: 3vw;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.feedback h2 {
+    font-size: 2vw;
+    margin-bottom: 0.5vw;
+    font-family: 'Abril Fatface', cursive;
+    color: #fff;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5vw;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5vw;
+    font-size: 1vw;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.8vw;
+    border: 1px solid #c0c7e0;
+    border-radius: 5px;
+    font-size: 1.1vw;
+    background-color: #4a4b7e;
+    color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e2e6f2;
+    background-color: #50537f;
+}
+
+button {
+    display: inline-block;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    color: #fff;
+    background-color: #5561a4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6975c1;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feedback h2 {
+        font-size: 5vw;
+    }
+
+    label {
+        font-size: 3.5vw;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 3.2vw;
+    }
+
+    button {
+        font-size: 3.5vw;
+    }
+}

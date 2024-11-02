@@ -1,0 +1,309 @@
+html {
+    margin: 0px 0px auto 0px; 
+}
+body{
+    background-color: #383961;
+    margin-right: 0;
+    margin-left: 0;
+}
+.header {
+    margin-top: 0%;
+    display: flex;
+    width: 100%;
+    height: 5.5vw;
+    background-color: #383961;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo_container {
+    display: flex;
+    width: 30%;
+    background-color: inherit;
+    float: left;
+}
+.logo_container img{
+    margin-top: 1vw;
+    margin-left: 3vw;
+    padding-top: 0.2vw;
+    width: 6vw;
+}
+.nav_container {
+    display: flex;
+    width: 70%;
+    background-color: inherit;
+    float: right;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.nav_bar {
+    list-style: none;
+    margin-right: 1.5vw;
+}
+
+.nav_bar li {
+    padding-top: 1vw;
+    display: inline-block;
+    margin-right: 2vw;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+}
+
+.nav_bar li:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3vw;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth text color transition */
+    font-family: "Playfair Display", serif;
+}
+
+/* Underline animation */
+.nav_bar a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:whitesmoke; /* Underline color */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_bar a:hover:before {
+    visibility: visible;
+    width: 100%; /* Expands underline */
+}
+
+
+/* Glow effect on hover (optional) */
+.nav_bar a:hover {
+    text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+}
+
+/* Add keyframes for a dynamic entrance animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav_bar li {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Background hover effect for the nav items */
+.nav_bar li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav_bar li:hover::before {
+    transform: scaleX(1); /* Expands background effect on hover */
+}
+@media (max-width: 768px){
+    .header {
+        height: auto; /* Allow header height to adjust as needed */
+        padding: 1vw 3vw; /* Add some padding */
+    }
+    
+    .logo_container {
+        display: flex;
+        width: 30%;
+        background-color: inherit;
+        float: left;
+    }
+    .logo_container img{
+        margin-top: 2.3vw;
+        margin-left: 3vw;
+        padding-top: 0.2vw;
+        width: 5.5vw;
+    }
+    .nav_container {
+        display: flex;
+        width: 70%;
+        background-color: inherit;
+        float: right;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    
+    .nav_bar {
+        list-style: none;
+        margin-right: 1.5vw;
+    }
+    
+    .nav_bar li {
+        padding-top: 0;
+        display: inline-block;
+        margin-right: 2vw;
+        position: relative;
+        transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+    }
+    
+    .nav_bar li:hover {
+        transform: scale(1.1); /* Zoom effect */
+    }
+    
+    .nav_bar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3vw;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease; /* Smooth text color transition */
+        font-family: "Playfair Display", serif;
+    }
+    
+    /* Underline animation */
+    .nav_bar a:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color:whitesmoke; /* Underline color */
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .nav_bar a:hover:before {
+        visibility: visible;
+        width: 100%; /* Expands underline */
+    }
+    
+    
+    /* Glow effect on hover (optional) */
+    .nav_bar a:hover {
+        text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+    }
+    
+    /* Add keyframes for a dynamic entrance animation */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .nav_bar li {
+        animation: slideIn 0.5s ease-in-out;
+    }
+    
+    /* Background hover effect for the nav items */
+    .nav_bar li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav_bar li:hover::before {
+        transform: scaleX(1); /* Expands background effect on hover */
+    }
+}
+/* Basic reset */
+/* Basic reset */
+h1{
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 8vw;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Merriweather", serif;
+  font-weight: 300;
+    text-decoration: double underline;
+}
+
+.card-container {
+    margin-top: 1vw;
+    margin-left: 10vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 2.6vw; /* Converted 50px to vw */
+    padding: 5.2vw 1vw; /* Converted 100px 20px to vw */
+}
+
+.card-custom {
+    border: 0.16vw solid #383961; /* Converted 3px to vw */
+    background-color: transparent;
+    width: 20.83vw; /* Converted 400px to vw */
+    border-radius: 0.78vw; /* Converted 15px to vw */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1.04vw; /* Converted 20px to vw */
+    outline: none; /* Prevents extra outline */
+}
+
+.card-custom:hover {
+    transform: translateY(-0.52vw) scale(1.05); /* Converted 10px to vw */
+    box-shadow: 0 0.78vw 1.56vw rgba(0, 0, 0, 0.2); /* Converted 15px 30px to vw */
+    /* Removed background-color change */
+}
+
+.card-header {
+    background-color: #383961;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    text-align: center;
+    padding: 1.04vw; /* Converted 20px to vw */
+    font-size: 1.67vw; /* Converted 1.6rem to vw */
+    border-bottom: 0.1vw solid rgba(255, 255, 255, 0.8); /* Converted 2px to vw */
+}
+
+.card-body {
+    padding: 1.56vw; /* Converted 30px to vw */
+    background-color: #383961;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Playfair Display", serif;
+}
+
+.card-text {
+    color:  rgba(255, 255, 255, 0.8);
+    font-size: 1.5vw; /* Converted 1.2rem to vw */
+    line-height: 1.7;
+    font-family: "Playfair Display", serif;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(2,1fr); /* 1 card per row for very small screens */
+    }
+}

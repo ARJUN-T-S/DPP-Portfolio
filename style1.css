@@ -1,0 +1,494 @@
+html {
+    margin: 0px 0px auto 0px; 
+}
+body{
+    background-color: #383961;
+    margin-right: 0;
+    margin-left: 0;
+}
+.header {
+    margin-top: 0%;
+    display: flex;
+    width: 100%;
+    height: 5.5vw;
+    background-color: #383961;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.logo_container {
+    display: flex;
+    width: 30%;
+    background-color: inherit;
+    float: left;
+}
+.logo_container img{
+    margin-top: 1vw;
+    margin-left: 3vw;
+    padding-top: 0.2vw;
+    width: 6vw;
+}
+.nav_container {
+    display: flex;
+    width: 70%;
+    background-color: inherit;
+    float: right;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.nav_bar {
+    list-style: none;
+    margin-right: 1.5vw;
+}
+
+.nav_bar li {
+    padding-top: 1vw;
+    display: inline-block;
+    margin-right: 2vw;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+}
+
+.nav_bar li:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.nav_bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3vw;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease; /* Smooth text color transition */
+    font-family: "Playfair Display", serif;
+}
+
+/* Underline animation */
+.nav_bar a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:whitesmoke; /* Underline color */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_bar a:hover:before {
+    visibility: visible;
+    width: 100%; /* Expands underline */
+}
+
+
+/* Glow effect on hover (optional) */
+.nav_bar a:hover {
+    text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+}
+
+/* Add keyframes for a dynamic entrance animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav_bar li {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Background hover effect for the nav items */
+.nav_bar li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.nav_bar li:hover::before {
+    transform: scaleX(1); /* Expands background effect on hover */
+}
+@media (max-width: 768px){
+    .header {
+        height: auto; /* Allow header height to adjust as needed */
+        padding: 1vw 3vw; /* Add some padding */
+    }
+    
+    .logo_container {
+        display: flex;
+        width: 30%;
+        background-color: inherit;
+        float: left;
+    }
+    .logo_container img{
+        margin-top: 2.3vw;
+        margin-left: 3vw;
+        padding-top: 0.2vw;
+        width: 5.5vw;
+    }
+    .nav_container {
+        display: flex;
+        width: 70%;
+        background-color: inherit;
+        float: right;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    
+    .nav_bar {
+        list-style: none;
+        margin-right: 1.5vw;
+    }
+    
+    .nav_bar li {
+        padding-top: 0;
+        display: inline-block;
+        margin-right: 2vw;
+        position: relative;
+        transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+    }
+    
+    .nav_bar li:hover {
+        transform: scale(1.1); /* Zoom effect */
+    }
+    
+    .nav_bar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.3vw;
+        position: relative;
+        padding-bottom: 5px;
+        transition: color 0.3s ease; /* Smooth text color transition */
+        font-family: "Playfair Display", serif;
+    }
+    
+    /* Underline animation */
+    .nav_bar a:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color:whitesmoke; /* Underline color */
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .nav_bar a:hover:before {
+        visibility: visible;
+        width: 100%; /* Expands underline */
+    }
+    
+    
+    /* Glow effect on hover (optional) */
+    .nav_bar a:hover {
+        text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+    }
+    
+    /* Add keyframes for a dynamic entrance animation */
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .nav_bar li {
+        animation: slideIn 0.5s ease-in-out;
+    }
+    
+    /* Background hover effect for the nav items */
+    .nav_bar li::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+    
+    .nav_bar li:hover::before {
+        transform: scaleX(1); /* Expands background effect on hover */
+    }
+}
+.container1{
+    margin-top: 9vw;
+    color: rgba(255, 255, 255,0.8);
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 1.5vw;
+    text-decoration:double underline rgba(255, 255, 255,0.8);
+}
+@media (max-width: 768px){
+    .container1{
+        margin-top: 15vw;
+        color: rgba(255, 255, 255,0.8);
+        text-align: center;
+        font-family: "Playfair Display", serif;
+        font-size: 1.5vw;
+        text-decoration:double underline rgba(255, 255, 255,0.8);
+    }
+
+}
+.container2{
+    width: 100%;
+    margin-top: 4vw;
+    height: 30vw;
+    display: flex;    
+}
+.c2info{
+    width: 65%;
+    float: left;
+    height: 30vw;
+    color: rgba(255, 255, 255,0.8);
+    text-align: center;
+}
+.c2info h1{
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-decoration: underline rgba(255, 255, 255,0.8);
+    font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+.c2info p{
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: "Playfair Display", serif ;
+}
+
+.c2img img{
+    width: 22vw;
+    height: 22vw;
+}
+.container3{
+    width: 100%;
+    margin-top:0vw;
+    height: 30vw;
+  
+}
+.c3info{
+    width: 65%;
+    float: right;
+    height: 30vw;
+    color: rgba(255, 255, 255,0.8);
+    text-align: center;
+}
+.c3info h1{
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-decoration: underline rgba(255, 255, 255,0.8);
+    font-family:"Playfair Display", serif ;
+}
+.c3info p{
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: "Playfair Display", serif ;
+}
+
+.c3img img{
+    width: 22vw;
+    height: 22vw;
+    
+}
+.container4{
+    width: 100%;
+    margin-top: 2vw;
+    height: 30vw;
+    display: flex;    
+}
+.c4info{
+    width: 65%;
+    float: left;
+    height: 30vw;
+    color: rgba(255, 255, 255,0.8);
+    text-align: center;
+}
+.c4info h1{
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-decoration: underline rgba(255, 255, 255,0.8);
+    font-family:"Playfair Display", serif ;
+}
+.c4info p{
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: "Playfair Display", serif ;
+}
+
+.c4img img{
+    width: 22vw;
+    height: 22vw;
+}
+.container5{
+    width: 100%;
+    margin-top:0vw;
+    height: 20vw;
+  
+}
+.c5info{
+    width: 65%;
+    float: right;
+    height: 20vw;
+    color: rgba(255, 255, 255,0.8);
+    text-align: center;
+}
+.c5info h1{
+    font-size: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-decoration: underline rgba(255, 255, 255,0.8);
+    font-family:"Playfair Display", serif ;
+}
+.c5info p{
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-family: "Playfair Display", serif ;
+}
+
+.c5img img{
+    width: 22vw;
+    height: 22vw;
+}
+.container6{
+    width: 100%;
+    height: 30vw;
+    margin-top: 2vw;
+    display: flex;
+    
+}
+.cas{
+    margin-left: 10vw;
+    height:20vw;
+    width: 40%;
+    text-align: center;
+}
+.cas h1{
+    font-size: 2vw;
+    color: rgba(255, 255, 255,0.8);
+    font-family: "Playfair Display", serif;
+    text-decoration: double underline;
+}
+.advisors{
+    width: 25%;
+    height: 20vw;
+    margin-left: 4vw;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+.advisors h1{
+    font-size: 2vw;
+    color: rgba(255, 255, 255,0.8);
+    font-family: "Playfair Display", serif;
+    text-decoration: double underline;
+}
+ul{
+      text-decoration: none;
+      list-style: none;
+      color: rgba(255, 255, 255,0.8);
+      font-size: 1.5vw;
+      font-family: "Playfair Display", serif;
+}
+/* Add keyframes for sliding animations */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%); /* Start from the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%); /* Start from the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+/* Apply the animation to the respective image classes */
+.c2img {
+    width: 35%;
+    float: right;
+    display: flex;
+    height: 30vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.c3img {
+    width: 35%;
+    float: left;
+    display: flex;
+    height: 30vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.c4img {
+    width: 35%;
+    float: right;
+    display: flex;
+    height: 30vw;  
+    justify-content: center;
+    align-items: center;
+}
+
+.c5img {
+    width: 35%;
+    float: left;
+    display: flex;
+    height: 20vw;
+    justify-content: center;
+    align-items: center;
+}
+/* Hide images initially */
+.c2img, .c3img, .c4img, .c5img {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slightly move down */
+}
+
+/* Apply animations */
+.c2img.animated, .c4img.animated {
+    animation: slideInFromRight 0.8s ease-in-out forwards; /* Slide in from left */
+}
+
+.c3img.animated, .c5img.animated {
+    animation: slideInFromLeft 0.8s ease-in-out forwards; /* Slide in from right */
+}
+
+
