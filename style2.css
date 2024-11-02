@@ -1,7 +1,7 @@
 html {
     margin: 0px 0px auto 0px; 
 }
-body{
+body {
     background-color: #383961;
     margin-right: 0;
     margin-left: 0;
@@ -24,7 +24,7 @@ body{
     background-color: inherit;
     float: left;
 }
-.logo_container img{
+.logo_container img {
     margin-top: 1vw;
     margin-left: 3vw;
     padding-top: 0.2vw;
@@ -74,7 +74,7 @@ body{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color:whitesmoke; /* Underline color */
+    background-color: whitesmoke; /* Underline color */
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -83,7 +83,6 @@ body{
     visibility: visible;
     width: 100%; /* Expands underline */
 }
-
 
 /* Glow effect on hover (optional) */
 .nav_bar a:hover {
@@ -122,126 +121,86 @@ body{
 .nav_bar li:hover::before {
     transform: scaleX(1); /* Expands background effect on hover */
 }
-@media (max-width: 768px){
+
+/* Mobile Adjustments for Navbar */
+@media (max-width: 1025px) {
     .header {
         height: auto; /* Allow header height to adjust as needed */
-        padding: 1vw 3vw; /* Add some padding */
+        padding: 1vw 2vw; /* Add some padding */
     }
-    
-    .logo_container {
-        display: flex;
-        width: 30%;
-        background-color: inherit;
-        float: left;
-    }
-    .logo_container img{
-        margin-top: 2.3vw;
-        margin-left: 3vw;
-        padding-top: 0.2vw;
-        width: 5.5vw;
-    }
+
     .nav_container {
-        display: flex;
-        width: 70%;
-        background-color: inherit;
-        float: right;
-        justify-content: flex-end;
-        text-align: center;
+        width: 100%; /* Full width for nav */
+        justify-content: center; /* Center nav items */
     }
-    
+
     .nav_bar {
         list-style: none;
-        margin-right: 1.5vw;
+        margin: 0; /* Reset margin for better alignment */
     }
-    
+
     .nav_bar li {
-        padding-top: 0;
-        display: inline-block;
-        margin-right: 2vw;
-        position: relative;
-        transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+        margin-right: 1.5vw; /* Adjust margin for spacing */
+        padding: 0.5vw; /* Add padding for touch targets */
     }
-    
-    .nav_bar li:hover {
-        transform: scale(1.1); /* Zoom effect */
-    }
-    
+
     .nav_bar a {
-        text-decoration: none;
-        color: white;
-        font-size: 1.3vw;
-        position: relative;
-        padding-bottom: 5px;
-        transition: color 0.3s ease; /* Smooth text color transition */
-        font-family: "Playfair Display", serif;
+        font-size: 2.0vw; /* Increase font size for readability */
+        padding: 10px; /* Add padding for better click area */
     }
-    
-    /* Underline animation */
-    .nav_bar a:before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color:whitesmoke; /* Underline color */
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
+
+    /* Hover Effects for Mobile */
+    .nav_bar li:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
     }
-    
-    .nav_bar a:hover:before {
-        visibility: visible;
-        width: 100%; /* Expands underline */
-    }
-    
-    
+
     /* Glow effect on hover (optional) */
     .nav_bar a:hover {
         text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
     }
-    
-    /* Add keyframes for a dynamic entrance animation */
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 1vw 1.5vw; /* Less padding */
     }
-    
+
+    .nav_container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align nav items */
+    }
+
     .nav_bar li {
-        animation: slideIn 0.5s ease-in-out;
+        margin: 0.5vw 0; /* Margin for vertical spacing */
+        padding: 0; /* Reset padding */
     }
-    
-    /* Background hover effect for the nav items */
-    .nav_bar li::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease;
-    }
-    
-    .nav_bar li:hover::before {
-        transform: scaleX(1); /* Expands background effect on hover */
+
+    .nav_bar a {
+        font-size: 3.0vw; /* Further increase font size */
+        padding: 8px; /* Adjust padding */
     }
 }
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+    .nav_bar a {
+        font-size: 3.5vw; /* Further increase font size for readability */
+    }
+
+    .nav_bar li {
+        margin: 0.3vw 0; /* Tighten margin for very small screens */
+    }
+}
+
 /* Basic reset */
-/* Basic reset */
-h1{
+h1 {
     text-align: center;
     font-size: 2vw;
     margin-top: 8vw;
     color: rgba(255, 255, 255, 0.8);
     font-family: "Merriweather", serif;
-  font-weight: 300;
+    font-weight: 300;
     text-decoration: double underline;
 }
 
@@ -268,7 +227,6 @@ h1{
 .card-custom:hover {
     transform: translateY(-0.52vw) scale(1.05); /* Converted 10px to vw */
     box-shadow: 0 0.78vw 1.56vw rgba(0, 0, 0, 0.2); /* Converted 15px 30px to vw */
-    /* Removed background-color change */
 }
 
 .card-header {
@@ -289,7 +247,7 @@ h1{
 }
 
 .card-text {
-    color:  rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.5vw; /* Converted 1.2rem to vw */
     line-height: 1.7;
     font-family: "Playfair Display", serif;
@@ -304,6 +262,6 @@ h1{
 
 @media (max-width: 480px) {
     .card-container {
-        grid-template-columns: repeat(2,1fr); /* 1 card per row for very small screens */
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row for very small screens */
     }
 }

@@ -304,3 +304,132 @@ body{
     color: rgb(255, 255, 255,0.8);
     font-family: "Playfair Display", serif;
 }
+@media (max-width: 1025px) {
+    .header {
+        height: auto; /* Allow header height to adjust */
+        padding: 1vw 2vw; /* Add some padding */
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center; /* Center align items */
+    }
+
+    .logo_container {
+        width: 100%; /* Full width for logo */
+        text-align: center; /* Center the logo */
+    }
+
+    .nav_container {
+        width: 100%; /* Full width for nav */
+        justify-content: center; /* Center nav items */
+    }
+
+    .nav_bar {
+        margin: 0; /* Reset margin for better spacing */
+    }
+
+    .nav_bar li {
+        margin: 0 1vw; /* Adjust margin for spacing */
+    }
+
+    .nav_bar a {
+        font-size: 2vw; /* Adjust font size */
+        padding: 10px; /* Add padding for touch targets */
+    }
+
+    .location {
+        height: 40vw; /* Adjust height for location section */
+        margin: 5vw 0; /* Add margin for spacing */
+    }
+
+    .map {
+        width: 100%; /* Full width for map */
+        margin-bottom: 5vw; /* Space below map */
+    }
+
+    .map iframe {
+        width: 100%; /* Full width for iframe */
+        height: 30vw; /* Height for iframe */
+    }
+
+    .titles {
+        margin-top: 8vw; /* Spacing above titles */
+        text-align: center; /* Center titles */
+    }
+
+    .title1,
+    .title2 {
+        width: 100%; /* Full width for titles */
+        float: none; /* Reset float */
+    }
+
+    .title1 h1,
+    .title2 h1 {
+        font-size: 3.5vw; /* Adjust font size for titles */
+    }
+
+    .add {
+        width: 90%; /* Adjust width for address */
+        float: none; /* Reset float */
+        margin: 2vw auto; /* Center address */
+        text-align: center; /* Center text */
+    }
+
+    .add ul {
+        font-size: 2.5vw; /* Adjust font size for address */
+    }
+}
+
+/* Additional adjustments for small screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 1vw 1.5vw; /* Less padding */
+    }
+
+    .nav_bar a {
+        font-size: 3vw; /* Further adjust font size */
+    }
+
+    .map {
+        height: 50vw; /* Increase height for better visibility */
+    }
+
+    .map iframe {
+        height: 40vw; /* Adjust iframe height */
+    }
+
+    .title1 h1,
+    .title2 h1 {
+        font-size: 4vw; /* Increase title font size */
+    }
+
+    .add ul {
+        font-size: 3vw; /* Increase font size for address */
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 500px) {
+  .header {
+    padding: 0.5vw; /* Less padding */
+  }
+
+  .nav_bar a {
+    font-size: 3.5vw; /* Further increase font size */
+  }
+
+  .map {
+    height: 50vw; /* Increase height for better visibility */
+  }
+
+  .map iframe {
+    height: 40vw; /* Adjust height for iframe */
+  }
+
+  .title1 h1,
+  .title2 h1 {
+    font-size: 5vw; /* Further increase title font size */
+  }
+
+  .add ul {
+    font-size: 4vw; /* Further increase font size for address */
+  }
+}
