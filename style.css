@@ -1,13 +1,15 @@
 html {
-  margin: 0px 0px auto 0px;
+  margin: 0 0 auto 0;
 }
+
 body {
   background-color: #383961;
   margin-right: 0;
   margin-left: 0;
 }
+
 .header {
-  margin-top: 0%;
+  margin-top: 0;
   display: flex;
   width: 100%;
   height: 5.5vw;
@@ -15,7 +17,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 0 0.8vw 1.6vw rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .logo_container {
@@ -24,12 +26,14 @@ body {
   background-color: inherit;
   float: left;
 }
+
 .logo_container img {
   margin-top: 1vw;
   margin-left: 3vw;
   padding-top: 0.2vw;
   width: 6vw;
 }
+
 .nav_container {
   display: flex;
   width: 70%;
@@ -49,7 +53,7 @@ body {
   display: inline-block;
   margin-right: 2vw;
   position: relative;
-  transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav_bar li:hover {
@@ -61,39 +65,35 @@ body {
   color: white;
   font-size: 1.3vw;
   position: relative;
-  padding-bottom: 5px;
-  transition: color 0.3s ease; /* Smooth text color transition */
+  padding-bottom: 0.5vh;
   font-family: "Playfair Display", serif;
 }
 
-/* Underline animation */
 .nav_bar a:before {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 0.2vh;
   bottom: 0;
   left: 0;
-  background-color: whitesmoke; /* Underline color */
+  background-color: whitesmoke;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
 
 .nav_bar a:hover:before {
   visibility: visible;
-  width: 100%; /* Expands underline */
+  width: 100%;
 }
 
-/* Glow effect on hover (optional) */
 .nav_bar a:hover {
-  text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
+  text-shadow: 0 0 0.8vw rgba(133, 157, 204, 0.6);
 }
 
-/* Add keyframes for a dynamic entrance animation */
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-2vh);
   }
   to {
     opacity: 1;
@@ -105,7 +105,6 @@ body {
   animation: slideIn 0.5s ease-in-out;
 }
 
-/* Background hover effect for the nav items */
 .nav_bar li::before {
   content: "";
   position: absolute;
@@ -119,182 +118,98 @@ body {
 }
 
 .nav_bar li:hover::before {
-  transform: scaleX(1); /* Expands background effect on hover */
+  transform: scaleX(1);
 }
+
 @media (max-width: 768px) {
   .header {
-    height: auto; /* Allow header height to adjust as needed */
-    padding: 1vw 3vw; /* Add some padding */
+    height: auto;
+    padding: 2vw;
   }
 
-  .logo_container {
-    display: flex;
-    width: 30%;
-    background-color: inherit;
-    float: left;
-  }
   .logo_container img {
-    margin-top: 2.3vw;
-    margin-left: 3vw;
-    padding-top: 0.2vw;
-    width: 5.5vw;
+    width: 15vw;
+    margin-top: 2vw;
   }
+
   .nav_container {
-    display: flex;
-    width: 70%;
-    background-color: inherit;
-    float: right;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: center;
   }
 
-  .nav_bar {
-    list-style: none;
-    margin-right: 1.5vw;
-  }
-
   .nav_bar li {
-    padding-top: 0;
-    display: inline-block;
-    margin-right: 2vw;
-    position: relative;
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition effect */
-  }
-
-  .nav_bar li:hover {
-    transform: scale(1.1); /* Zoom effect */
+    margin: 0.5vw;
   }
 
   .nav_bar a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.3vw;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease; /* Smooth text color transition */
-    font-family: "Playfair Display", serif;
+    font-size: 4vw;
+    padding: 1vw;
   }
 
-  /* Underline animation */
-  .nav_bar a:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: whitesmoke; /* Underline color */
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .nav_bar a:hover:before {
-    visibility: visible;
-    width: 100%; /* Expands underline */
-  }
-
-  /* Glow effect on hover (optional) */
-  .nav_bar a:hover {
-    text-shadow: 0px 0px 8px rgba(133, 157, 204, 0.6); /* Subtle glow effect */
-  }
-
-  /* Add keyframes for a dynamic entrance animation */
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .nav_bar li {
-    animation: slideIn 0.5s ease-in-out;
-  }
-
-  /* Background hover effect for the nav items */
-  .nav_bar li::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-
-  .nav_bar li:hover::before {
-    transform: scaleX(1); /* Expands background effect on hover */
-  }
 }
+
 .container2 {
   width: 100%;
   height: 35vw;
   margin-top: 10vw;
 }
+
 .container_quotes {
-  margin-left: 0;
   width: 50%;
   height: 26vw;
   float: left;
   margin-top: 1%;
 }
+
 .container_anim {
   display: flex;
   width: 50%;
-  font-family: "Merriweather", serif;
-  font-weight: 300;
   height: 26vw;
   float: right;
-  justify-content: center; /* Center images horizontally */
-  align-items: center; /* Center images vertically */
-  position: relative; /* Position relative for absolute children */
+  justify-content: center;
+  align-items: center;
+  position: relative;
   margin-top: 1%;
   flex-wrap: wrap;
 }
 
 .image {
-  position: absolute; /* Position images absolutely for overlapping */
-  width: 21vw; /* Increased image size to make them larger */
-  height: auto; /* Maintain aspect ratio */
-  opacity: 0; /* Initially hidden */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+  position: absolute;
+  width: 21vw;
+  height: auto;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Existing animations */
 @keyframes slideInFromLeft {
   from {
-    transform: translateX(-150%); /* Start off-screen left */
+    transform: translateX(-150%);
     opacity: 0;
   }
   to {
-    transform: translateX(0); /* End at center */
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes slideInFromRight {
   from {
-    transform: translateX(150%); /* Start off-screen right */
+    transform: translateX(150%);
     opacity: 0;
   }
   to {
-    transform: translateX(0); /* End at center */
+    transform: translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes slideInFromBottom {
   from {
-    transform: translateY(150%); /* Start off-screen bottom */
+    transform: translateY(150%);
     opacity: 0;
   }
   to {
-    transform: translateY(0); /* End at center */
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -305,163 +220,150 @@ body {
     opacity: 1;
   }
   to {
-    transform: scale(2); /* Scale up during clash */
-    opacity: 0; /* Fade out after clash */
+    transform: scale(2);
+    opacity: 0;
   }
 }
+
 .container_quotes {
-  margin-left: 0;
   width: 45%;
   height: auto;
-  background-color: inherit; /* Keep the original background */
   padding: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 10px; /* Rounded corners for a smooth look */
+  border-radius: 1vw;
   margin-top: 5vw;
 }
 
 .container_quotes p {
   color: rgb(255, 255, 255);
   font-family: "Playfair Display", serif;
-  font-size: 2.5vw; /* Slightly smaller font size */
+  font-size: 2.5vw;
   line-height: 1.5;
   font-weight: 500;
   margin: 3vw 0;
-  padding: 0;
-  animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
 }
+
 .caption {
-  position: absolute; /* Position it relative to the container */
-  bottom: 0vw; /* Move it down by 20px from the bottom of the container */
-  left: 50%; /* Center it horizontally */
-  transform: translateX(-50%); /* Adjust for centering */
-  color: white; /* Text color */
-  font-family: "Abril Fatface", serif; /* Font family */
-  font-size: 2.5vw; /* Responsive font size */
-  text-align: center; /* Center align text */
-  padding: 10px; /* Add some padding for better spacing */
-  background: rgba(
-    148,
-    150,
-    255,
-    0.1
-  ); /* Semi-transparent background for readability */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.5s ease; /* Smooth fade-in transition */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Abril Fatface", serif;
+  font-size: 2.5vw;
+  text-align: center;
+  padding: 1vw;
+  background: rgba(148, 150, 255, 0.1);
+  border-radius: 0.5vw;
+  box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
+
 .container_anim {
-  padding-bottom: 20px; /* Add padding to create space */
+  padding-bottom: 2vw;
 }
+
 .det h1 {
   text-decoration: double underline;
-  font-size: 3.5vw; /* Adjust font size for responsiveness */
+  font-size: 3.5vw;
 }
-/* For screens up to 768px (tablets and smaller devices) */
 @media (max-width: 768px) {
   .header {
-    height: auto; /* Allow header to adjust height */
-    padding: 2vw; /* Add padding for touch targets */
-    box-shadow: none; /* Remove shadow for smaller screens */
+    height: auto;
+    padding: 2vw;
   }
 
   .logo_container img {
-    width: 15vw; /* Adjust logo size */
-    margin-top: 2vw; /* Increase top margin */
+    width: 15vw;
+    margin-top: 2vw;
   }
 
   .nav_container {
-    justify-content: center; /* Center nav items */
-    text-align: center; /* Center text */
-    flex-wrap: wrap; /* Allow nav items to wrap */
-  }
-
-  .nav_bar {
-    padding: 0; /* Remove extra padding */
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
   }
 
   .nav_bar li {
-    margin: 0.5vw; /* Add space between items */
+    margin: 0.5vw;
   }
 
   .nav_bar a {
-    font-size: 4vw; /* Increase font size for readability */
-    padding: 1vw; /* Increase padding */
+    font-size: 4vw;
+    padding: 1vw;
   }
 
   .container2 {
-    height: auto; /* Adjust height to fit content */
-    margin-top: 40vw; /* Ensure content is below navbar */
+    height: auto;
+    margin-top: 15vw; /* Increased margin-top to ensure visibility */
   }
 
   .container_quotes {
-    width: 90%; /* Make quotes container wider */
-    margin: 0 auto; /* Center quotes */
-    margin-top: 8vw; /* Space below navbar */
-    margin-bottom: 20vw; /* Ensure content is below navbar */
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8vw;
+    margin-bottom: 20vw;
   }
 
   .container_anim {
-    width: 90%; /* Make animations container wider */
-    margin: 10 auto; /* Center animations */
-    flex-direction: column; /* Stack images vertically */
-    margin-top: 2vw; /* Space from quotes */
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 2vw;
   }
 
   .image {
-    width: 70%; /* Adjust image size */
-    margin-bottom: 2vw; /* Space between images */
+    width: 70%;
+    margin-bottom: 2vw;
   }
 
   .caption {
-    font-size: 5vw; /* Larger font for caption */
-    padding: 1.5vw; /* Adjust padding */
+    font-size: 5vw;
+    padding: 1.5vw;
   }
 }
 
-/* For screens up to 500px (mobile devices) */
 @media (max-width: 500px) {
   .header {
-    padding: 2vw; /* Add padding */
+    padding: 2vw;
   }
 
   .logo_container img {
-    width: 25vw; /* Adjust logo size */
-    margin-top: 2.5vw; /* Increase top margin */
+    width: 25vw;
+    margin-top: 2.5vw;
   }
 
   .nav_bar a {
-    font-size: 5vw; /* Increase font size for clarity */
-    padding: 1.5vw; /* Increase padding */
+    font-size: 5vw;
+    padding: 1.5vw;
   }
 
   .container2 {
-    margin-top: 25vw; /* Ensure space below navbar */
+    margin-top: 25vw;
   }
 
   .container_quotes {
-    width: 95%; /* Make quotes container full width */
-    margin-top: 6vw; /* Space below navbar */
-    font-size: 5vw; /* Smaller font for mobile */
+    width: 95%;
+    margin-top: 6vw;
+    font-size: 5vw;
   }
 
   .container_anim {
-    margin-top: 10px;
-    width: 95%; /* Full width for animation */
+    margin-top: 2vh;
+    width: 95%;
   }
 
   .image {
-    width: 80%; /* Make images larger */
-    margin-bottom: 4vw; /* Space between images */
+    width: 80%;
+    margin-bottom: 4vw;
   }
 
   .caption {
-    font-size: 6vw; /* Increase caption font size */
-    padding: 2vw; /* Increase padding */
+    font-size: 6vw;
+    padding: 2vw;
   }
 }
